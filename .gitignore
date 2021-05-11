@@ -107,6 +107,4 @@ dist
 config.json
 
 # enmap files
-enmap.sqlite
-enmap.sqlite-shm
-enmap.sqlite-wal
+data/
