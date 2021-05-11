@@ -2,8 +2,11 @@
 Botti Bitti2021 leiriä varten
 
 ## Käyttäminen
-1. Lisää botti palvelimellesi
-2. Aseta seuraavat asetukset [botin komennoilla](https://github.com/vil-mu/bittibotti/blob/main/README.md#komennot)
+1. Lataa koodi
+2. Muuta `sample-config.json` tiedoston nimi `config.json`:ksi ja lisää tiedostoon bottisi token
+3. Lataa botti VPS palvelimelle
+4. Kutsu botti DC palvelimelle
+5. Aseta seuraavat asetukset [botin komennoilla](https://github.com/vil-mu/bittibotti/blob/main/README.md#komennot)
 
     a. Aseta botin kuuntelema kanava  
     b. Aseta rooli jolla on oikeudet botin komentoihin*  
@@ -11,7 +14,7 @@ Botti Bitti2021 leiriä varten
     d. Aseta FAQ linkki  
     
     *Ei pakollinen. Komentoja pystyy käyttämään myös järjestelmänvalvojana
-3. Anna botin vastata automaattisesti määrittämiisi kysymyksiin
+6. Anna botin vastata automaattisesti määrittämiisi kysymyksiin
 
 ## Komennot
 
