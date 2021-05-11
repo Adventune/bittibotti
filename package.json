@@ -1,0 +1,16 @@
+{
+  "name": "bittibotti",
+  "version": "1.0.0",
+  "description": "Botti Bitti2021 leiriä varten",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+},
+  "author": "Samu Kupiainen",
+  "license": "ISC",
+  "dependencies": {
+    "discord": "^0.8.2",
+    "discord.js": "^12.5.3",
+    "enmap": "^5.8.5"
+  }
+}
