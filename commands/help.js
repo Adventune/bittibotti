@@ -2,7 +2,7 @@ exports.help = function(message, guildConf){
     message.reply("Tässä kaikki käytettävissäsi olevat komennot!");
     var p = guildConf.prefix;
     message.channel.send("`" + p + " faq`: Linkki usein kysyttyihin kysymyksiin \n"
-    + "`" + p + " help`: Lähettää nämä viestit");
+    + "`" + p + " help`: Lähettää tämän viestin");
 
 
     if (!message.member.hasPermission("ADMINISTRATOR")){        
