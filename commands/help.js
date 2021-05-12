@@ -25,5 +25,5 @@ exports.help = function(message, guildConf){
     + "`" + p + " matchpercentage <PROSENTTI>`: Kynnys jolla botti tunnistaa pelaajan viestin kysymykseksi. Luku prosentteina desimaalimuodossa (esim. 0.8) \n" 
     + "`" + p + " modrole <@ROOLIMAININTA>`: Asettaa roolin jolla on oikeudet kaikkiin komentoihin \n" 
     + "`" + p + " reset`: Nollaa kaikki botin asetukset oletusarvoisiksi \n\n"
-    + "Mikäli havaitsit ongelman botin toiminnassa, ilmoitathan siitä kehittäjälle (DC: @Adventune#8880)!");
+    + "Mikäli havaitsit ongelman botin toiminnassa, ilmoitathan siitä kehittäjälle (Discord: @Adventune#8880)!");
 }
