@@ -20,13 +20,17 @@ Botti Bitti2021 leiriä varten
 
 `faq`: Lähettää vastauksena FAQ linkin `Syntaksi`: faq
 
+`rules` : Lähettää vastauksena sääntöjen linkin `Syntaksi`: rules
+
 `help`: Lähettää vastauksena komennot ja niiden syntaksit `Syntaksi`: help
 
 ## Moderaattorin komennot
 
 `setprefix`: Asettaa botin prefixin `Syntaksi`: setprefix <PREFIX>
 
-`setfaqlink`: Asetta FAQ linkin `Syntaksi`: setfaqlink <LINKKI>
+`setfaq`: Asetta FAQ linkin `Syntaksi`: setfaq <LINKKI>
+
+`setrules`: Asetta sääntöjen linkin `Syntaksi`: setrules <LINKKI>
 
 `setchannel`: Asettaa kanavan jolla komento suoritetaan botin kuuntelemaksi kanavaksi `Syntaksi`: setchannel
 

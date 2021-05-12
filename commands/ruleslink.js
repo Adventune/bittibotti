@@ -1,7 +1,7 @@
 const Utils = require('../scripts/Utils');
 const Index = require('../index');
 
-exports.setfaqlink = function(message, guildConf) {
+exports.setruleslink = function(message, guildConf) {
     var json = Utils.decodeMessage(message);
     var args = json.args;
 
@@ -15,21 +15,22 @@ exports.setfaqlink = function(message, guildConf) {
             return message.reply("Sinulla ei valitettavasti ole oikeuksia tähän komentoon!");
         }
     }
-    if(args.length === 0) return message.reply("`Komennon käyttö:` " + guildConf.prefix + " setfaq <LINKKI>");
+
+    if(args.length === 0) return message.reply("`Komennon käyttö:` " + guildConf.prefix + " setrules <LINKKI>");
     const url = args[0]; 
     if(isValidHttpUrl(url)){
-        Index.setSettings(message, "faqLink", url);
-        message.reply("Usein kysyttyjen kysymysten linkki on päivitetty!");
+        Index.setSettings(message, "rulesLink", url);
+        message.reply("Sääntöjen linkki on päivitetty!");
     }
     else {
         message.reply("Syöttämäsi linkki ei vaikuta olevan pätevä! Varmista että kirjoitit linkin oikein!")
     }
 }
 
-exports.getfaqlink = function(message, guildConf) {
-    var link = guildConf.faqLink;
+exports.getruleslink = function(message, guildConf) {
+    var link = guildConf.rulesLink;
     if(link === "") link = "Linkkiä ei määritelty"
-    message.reply("Tässä linkki usein kysyttyihin kysymyksiin: " + link)
+    message.reply("Tässä linkki sääntöihin: " + link)
 }
 
 function isValidHttpUrl(string) {

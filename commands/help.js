@@ -2,6 +2,7 @@ exports.help = function(message, guildConf){
     message.reply("Tässä kaikki käytettävissäsi olevat komennot!");
     var p = guildConf.prefix;
     message.channel.send("`" + p + " faq`: Linkki usein kysyttyihin kysymyksiin \n"
+    + "`" + p + " rules`: Linkki sääntöihin \n"
     + "`" + p + " help`: Lähettää tämän viestin");
 
 
@@ -14,7 +15,8 @@ exports.help = function(message, guildConf){
     }
 
     message.channel.send("`" + p + " settings`: Näytä botin tämänhetkiset asetukset \n"
-    + "`" + p + " setfaqlink <LINKKI>`: Muokkaa linkkiä usein kysyttyihin kysymyksiin \n"
+    + "`" + p + " setfaq <LINKKI>`: Muokkaa linkkiä usein kysyttyihin kysymyksiin \n"
+    + "`" + p + " setrules <LINKKI>`: Muokkaa linkkiä sääntöihin \n"
     + "`" + p + " setprefix <PREFIX>`: Muokkaa botin prefixiä \n"
     + "`" + p + " setchannel`: Asettaa kanavan, jolle tämä viesti lähetetään botin kuuntelemaksi kanavaksi (Komennot toimivat edelleen kaikilla kanavilla) \n"
     + "`" + p + " addfaq <KYSYMYS>; <VASTAUS>`: Luo uuden usein kysytyn kysymyksen, jota botti vertaa pelaajan lähettämiin kysymyksiin \n"

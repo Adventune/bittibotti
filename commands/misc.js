@@ -97,7 +97,7 @@ exports.currentsettings = function(client, message, guildConf){
     var channel = client.channels.cache.get(guildConf.listenedChannel);
     if(channel === undefined) channel = "";
 
-    const role = message.guild.roles.cache.find(r => r.name === guildConf.modRole);
+    var role = message.guild.roles.cache.find(r => r.name === guildConf.modRole);
     if(role === undefined) role = "";
 
     message.reply("Tämän hetkiset asetukset: \n" 
@@ -105,5 +105,6 @@ exports.currentsettings = function(client, message, guildConf){
     + "`Kuunneltu kanava:` " + channel + "\n"
     + "`Suodatinkynnys:` " + guildConf.matchpercentage + "\n"
     + "`FAQ Linkki:` <" + guildConf.faqLink + ">\n"
+    + "`Sääntöjen Linkki:` <" + guildConf.rulesLink + ">\n"
     + "`Rooli komentojen käyttöön:` <@&" + role + ">\n");
 }

@@ -4,6 +4,7 @@ const client = new Discord.Client();
 const Enmap = require('enmap');
 const Utils = require('./scripts/Utils');
 const FAQLink = require('./commands/faqlink');
+const RulesLink = require('./commands/ruleslink');
 const Prefix = require('./commands/prefix');
 const Channel = require('./commands/channel');
 const Question = require('./commands/question');
@@ -23,6 +24,7 @@ const defaultSettings = {
     listenedChannel: "",
     matchpercentage: "0.8",
     faqLink: "",
+    rulesLink: "",
     questions: []
 }
   
@@ -58,9 +60,19 @@ client.on('message', async message => {
                 FAQLink.getfaqlink(message, guildConf);
                 break;
             
-            // .b setfaqlink <faq_link>
-            case 'setfaqlink':
+            // .b setfaq <link>
+            case 'setfaq':
                 FAQLink.setfaqlink(message, guildConf);
+                break;
+
+            // .b säännöt
+            case 'rules':
+                RulesLink.getruleslink(message, guildConf);
+                break;
+            
+            // .b setrules <link>
+            case 'setrules':
+                RulesLink.setruleslink(message, guildConf);
                 break;
 
             // .b setchannel 
