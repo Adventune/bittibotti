@@ -4,7 +4,7 @@ Botti Bitti2021 leiriä varten
 ## Käyttäminen
 1. Lataa koodi
 2. Muuta `sample-config.json` tiedoston nimi `config.json`:ksi ja lisää tiedostoon bottisi token
-3. Lataa botti VPS palvelimelle
+3. Lataa botti VPS palvelimelle (HUOM! Botti käyttää [`Enmap`](https://enmap.evie.dev/) kirjastoa toiminnassaan. Kirjasto vaatii tiedostojärjestelmän käyttöoikeuden toimiakseen)
 4. Kutsu botti DC palvelimelle
 5. Aseta seuraavat asetukset [botin komennoilla](https://github.com/vil-mu/bittibotti/blob/main/README.md#komennot)
 
