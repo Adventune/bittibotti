@@ -146,7 +146,7 @@ client.on('message', async message => {
                 msgvar1 = await message.reply("Hei! Ellen ole erehtynyt, havaitsin viestissäsi usein kysytyn kysymyksen Bittiin liittyen! \n"
                 + "Viestisi: `" + asked + "` \n"
                 + "Kysymys jonka havaitsin viestissäsi: `" + question + "`\n"
-                + "```Tässä vastaus jonka uskon vastaavan kysymykseesi: " + answer + "```");
+                + "```Tässä vastaus jonka uskon vastaavan kysymykseesi: \`" + answer + "\````");
                 if(guildConf.faqLink !== "") msgvar2 = await message.channel.send("Tässä myös linkki usein kysyttyjen kysymysten sivulle: <"+ guildConf.faqLink + ">");
                 msgvar3 = await message.channel.send("Eikö minusta ollut apua? Lisäsin reaktion viestiisi! Jos painat reaktiota poistan vastaukseni ja jätän vastuun oikealle ihmiselle!");
                 
