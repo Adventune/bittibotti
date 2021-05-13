@@ -18,7 +18,7 @@ Botti Bitti2021 leiriä varten
 
 ## Päivittäminen
 1. Lataa koodi VPS palvelimelle komennolla `git pull https://github.com/vil-mu/bittibotti.git`
-2. Kun koodi on ladattu, ei sinun tarvitse välittää `sample-config.json` tiedostosta. Sitä ei käytetä koodissa. `config.json` tiedoston pitäisi olla ennallaan. Varmista tämä kuitenkin ennen uudelleen käynnistämistä
+2. Kun koodi on ladattu, ei sinun tarvitse välittää `sample-config.json` tiedostosta. Se ei vaikuta toimintaan. Voit kuitenkin halutessasi poistaa sen. `config.json` tiedoston pitäisi olla ennallaan. Varmista tämä kuitenkin ennen uudelleen käynnistämistä
 3. Uudelleen käynnistä botti VPS palvelimella
 
 ## Komennot
