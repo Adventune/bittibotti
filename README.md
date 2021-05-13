@@ -1,11 +1,11 @@
 # BittiBotti
 Botti Bitti2021 leiriä varten
 
-## Käyttäminen
-1. Lataa koodi
-2. Muuta `sample-config.json` tiedoston nimi `config.json`:ksi ja lisää tiedostoon bottisi token
-3. Lataa botti VPS palvelimelle (HUOM! Botti käyttää [`Enmap`](https://enmap.evie.dev/) kirjastoa toiminnassaan. Kirjasto vaatii tiedostojärjestelmän käyttöoikeuden toimiakseen)
-4. Kutsu botti DC palvelimelle
+## Käyttöönotto
+1. Lataa koodi VPS palvelimelle komennolla `git clone https://github.com/vil-mu/bittibotti.git`
+2. Muuta `sample-config.json` tiedoston nimi `config.json`:ksi ja lisää tiedostoon bottisi token (Olettaen, että olet luonut uuden botin [täällä](https://discord.com/developers/applications/))
+3. Käynnistä botti VPS palvelimella komennolla `npm start` (HUOM! Botti käyttää [`Enmap`](https://enmap.evie.dev/) kirjastoa toiminnassaan. Kirjasto vaatii tiedostojärjestelmän käyttöoikeuden toimiakseen)
+4. Kutsu botti Discord palvelimelle
 5. Aseta seuraavat asetukset [botin komennoilla](https://github.com/vil-mu/bittibotti/blob/main/README.md#komennot)
 
     a. Aseta botin kuuntelema kanava  
@@ -15,6 +15,11 @@ Botti Bitti2021 leiriä varten
     
     *Ei pakollinen. Komentoja pystyy käyttämään myös järjestelmänvalvojana
 6. Anna botin vastata automaattisesti määrittämiisi kysymyksiin
+
+## Päivittäminen
+1. Lataa koodi VPS palvelimelle komennolla `git pull https://github.com/vil-mu/bittibotti.git`
+2. Kun koodi on ladattu, ei sinun tarvitse välittää `sample-config.json` tiedostosta. Sitä ei käytetä koodissa. `config.json` tiedoston pitäisi olla ennallaan. Varmista tämä kuitenkin ennen uudelleen käynnistämistä
+3. Uudelleen käynnistä botti VPS palvelimella
 
 ## Komennot
 
