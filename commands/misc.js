@@ -16,7 +16,7 @@ exports.match = function(message, guildConf){
         }
     }
 
-    if(args.length === 0 || args[0] > 1 || !Utils.isInt(args[0])) return message.reply("`Komennon käyttö:` " + guildConf.prefix + " matchpercentage <PROSENTTI_DESIMAALINA (>= 1)>");
+    if(args.length === 0 || args[0] > 1 || !Utils.isNum(args[0])) return message.reply("`Komennon käyttö:` " + guildConf.prefix + " matchpercentage <PROSENTTI_DESIMAALINA (<= 1)>");
 
     Index.setSettings(message, "matchpercentage", args[0]);
     message.reply("Uusi suodatinkynnys asetettu!")

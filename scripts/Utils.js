@@ -68,6 +68,6 @@ function editDistance(s1, s2) {
 }
 
 
-exports.isInt = function(value) {
-    return !isNaN(value) && (function(x) { return (x | 0) === x; })(parseFloat(value))
+exports.isNum = function(value) {
+    return !isNaN(value);
 }

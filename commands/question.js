@@ -23,7 +23,8 @@ exports.add = function(message, guildConf) {
         content.lastIndexOf(";")
     );
     var answer = content.substring(content.indexOf(";"));
-    answer = answer.substring(2);
+    answer = answer.substring(1);
+    answer = answer.trim();
 
     var json = Utils.qaToJson(question, answer);
     Index.setQuestions(message,json);
