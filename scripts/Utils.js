@@ -67,6 +67,9 @@ function editDistance(s1, s2) {
     return costs[s2.length];
 }
 
+exports.WordCount = function(str) { 
+  return str.split(" ").length;
+}
 
 exports.isNum = function(value) {
     return !isNaN(value);

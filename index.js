@@ -154,7 +154,7 @@ client.on('message', async message => {
                 message.awaitReactions((reaction, user) => user.id == message.author.id && (reaction.emoji.name == '❌'),
                 { max: 1, time: 30000 }).then(collected => {
                         if (collected.first().emoji.name == '❌') {
-                            message.reply('Kurjaa, että minusta ei ollut hyötyä! \nJoku jolla on mahdollisuus järjelliseen ajatteluun auttaa sinua pian!');
+                            message.reply('Kurjaa, että minusta ei ollut hyötyä! \nJoku jolla on mahdollisuus järjelliseen ajatteluun, auttaa sinua pian!');
                             if(msgvar1 !== undefined) msgvar1.delete();
                             if(msgvar2 !== undefined) msgvar2.delete();
                             if(msgvar3 !== undefined) msgvar3.delete();

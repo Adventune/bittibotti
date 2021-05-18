@@ -46,7 +46,7 @@ exports.remove = function(message, guildConf) {
         }
     }
 
-    if(args.length === 0 || !Utils.isInt(args[0])) return message.reply("`Komennon käyttö:` " + guildConf.prefix + " removefaq <ID>");
+    if(args.length === 0 || !Utils.isNum(args[0])) return message.reply("`Komennon käyttö:` " + guildConf.prefix + " removefaq <ID>");
     var questions = guildConf.questions;
     var i = 0;
     var index = -1;
