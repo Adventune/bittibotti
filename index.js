@@ -137,7 +137,6 @@ client.on('message', async message => {
             var parsedQuestion = Utils.parseQuestion(question);
 
             if(Utils.similarity(parsedQuestion, parsedAsked) > guildConf.matchpercentage){
-                message.react('❌');
                 var msgvar1;
                 var msgvar2;
                 var msgvar3;
@@ -148,10 +147,11 @@ client.on('message', async message => {
                 + "Kysymys jonka havaitsin viestissäsi: `" + question + "`\n"
                 + "```Tässä vastaus jonka uskon vastaavan kysymykseesi: \'" + answer + "\' ```");
                 if(guildConf.faqLink !== "") msgvar2 = await message.channel.send("Tässä myös linkki usein kysyttyjen kysymysten sivulle: <"+ guildConf.faqLink + ">");
-                msgvar3 = await message.channel.send("Eikö minusta ollut apua? Lisäsin reaktion viestiisi! Jos painat reaktiota poistan vastaukseni ja jätän vastuun oikealle ihmiselle!");
+                msgvar3 = await message.channel.send("Eikö minusta ollut apua? Lisäsin reaktion viestiini! Jos painat reaktiota poistan vastaukseni ja jätän vastuun oikealle ihmiselle!");
                 
                 // First argument is a filter function
-                message.awaitReactions((reaction, user) => user.id == message.author.id && (reaction.emoji.name == '❌'),
+                msgvar3.react('❌');
+                msgvar3.awaitReactions((reaction, user) => user.id == message.author.id && (reaction.emoji.name == '❌'),
                 { max: 1, time: 30000 }).then(collected => {
                         if (collected.first().emoji.name == '❌') {
                             message.reply('Kurjaa, että minusta ei ollut hyötyä! \nJoku jolla on mahdollisuus järjelliseen ajatteluun, auttaa sinua pian!');
