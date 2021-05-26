@@ -142,19 +142,46 @@ client.on('message', async message => {
                 var msgvar3;
 
                 var answer = guildConf.questions[i].answer;
-                msgvar1 = await message.reply("Hei! Ellen ole erehtynyt, havaitsin viestissäsi usein kysytyn kysymyksen Bittiin liittyen! \n"
-                + "Viestisi: `" + asked + "` \n"
-                + "Kysymys jonka havaitsin viestissäsi: `" + question + "`\n"
-                + "```Tässä vastaus jonka uskon vastaavan kysymykseesi: \'" + answer + "\' ```");
-                if(guildConf.faqLink !== "") msgvar2 = await message.channel.send("Tässä myös linkki usein kysyttyjen kysymysten sivulle: <"+ guildConf.faqLink + ">");
-                msgvar3 = await message.channel.send("Eikö minusta ollut apua? Lisäsin reaktion viestiini! Jos painat reaktiota poistan vastaukseni ja jätän vastuun oikealle ihmiselle!");
+                
+                msgvar1 = await message.channel.send(new Discord.MessageEmbed()
+                    .setTitle('Havaitsin usein kysytyn kysymyksen!')
+                    .addFields(
+                        { name: 'Hei!', value: 'Ellen ole erehtynyt, havaitsin viestissäsi usein kysytyn kysymyksen Bittiin liittyen!' },
+                        { name: 'Viestisi:', value: asked },
+                        { name: 'Kysymys jonka havaitsin viestissäsi:', value: question },
+                        { name: 'Tässä vastaus jonka uskon vastaavan kysymykseesi:', value: "> " +answer }
+                    )
+                    .setColor(3735296)
+                );
+                if(guildConf.faqLink !== "") {
+                    msgvar2 = await message.channel.send(new Discord.MessageEmbed()
+                        .addFields(
+                            { name: 'Tässä myös linkki usein kysyttyjen kysymysten sivulle', value: guildConf.faqLink },
+                        )
+                        .setColor(3735296)
+                    );
+                }
+                msgvar3 = await message.channel.send(new Discord.MessageEmbed()
+                    .addFields(
+                        { name: 'Eikö minusta ollut apua?', value: 'Lisäsin reaktion viestiini! Jos painat emojia poistan vastaukseni ja jätän vastuun oikealle ihmiselle!' },
+                    )
+                    .setFooter("Bitti 2021")
+                    .setColor(3735296)
+                );
                 
                 // First argument is a filter function
                 msgvar3.react('❌');
                 msgvar3.awaitReactions((reaction, user) => user.id == message.author.id && (reaction.emoji.name == '❌'),
                 { max: 1, time: 30000 }).then(collected => {
                         if (collected.first().emoji.name == '❌') {
-                            message.reply('Kurjaa, että minusta ei ollut hyötyä! \nJoku jolla on mahdollisuus järjelliseen ajatteluun, auttaa sinua pian!');
+                            message.channel.send(new Discord.MessageEmbed()
+                                .setTitle('Harmin paikka!')
+                                .addFields(
+                                    { name: 'Kurjaa, ettei minusta ollut hyötyä', value: 'Joku jolla on mahdollisuus järjelliseen ajatteluun, auttaa sinua pian!' }
+                                )
+                                .setFooter("Bitti 2021")
+                                .setColor(16765440)
+                            );
                             if(msgvar1 !== undefined) msgvar1.delete();
                             if(msgvar2 !== undefined) msgvar2.delete();
                             if(msgvar3 !== undefined) msgvar3.delete();
