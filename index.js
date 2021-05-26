@@ -142,6 +142,7 @@ client.on('message', async message => {
                 var msgvar3;
 
                 var answer = guildConf.questions[i].answer;
+                const emoji = client.emojis.cache.find(emoji => emoji.name === "x_no");
                 
                 msgvar1 = await message.channel.send(new Discord.MessageEmbed()
                     .setTitle('Havaitsin usein kysytyn kysymyksen!')
@@ -170,10 +171,10 @@ client.on('message', async message => {
                 );
                 
                 // First argument is a filter function
-                msgvar3.react('❌');
-                msgvar3.awaitReactions((reaction, user) => user.id == message.author.id && (reaction.emoji.name == '❌'),
+                msgvar3.react(emoji);
+                msgvar3.awaitReactions((reaction, user) => user.id == message.author.id && (reaction.emoji.name == 'x_no'),
                 { max: 1, time: 30000 }).then(collected => {
-                        if (collected.first().emoji.name == '❌') {
+                        if (collected.first().emoji.name == 'x_no') {
                             message.channel.send(new Discord.MessageEmbed()
                                 .setTitle('Harmin paikka!')
                                 .addFields(
