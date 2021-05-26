@@ -150,7 +150,7 @@ client.on('message', async message => {
                         { name: 'Hei!', value: 'Ellen ole erehtynyt, havaitsin viestissäsi usein kysytyn kysymyksen Bittiin liittyen!' },
                         { name: 'Viestisi:', value: asked },
                         { name: 'Kysymys jonka havaitsin viestissäsi:', value: question },
-                        { name: 'Tässä vastaus jonka uskon vastaavan kysymykseesi:', value: "> " +answer }
+                        { name: 'Tässä vastaus jonka uskon vastaavan kysymykseesi:', value: answer }
                     )
                     .setColor(3735296)
                 );
